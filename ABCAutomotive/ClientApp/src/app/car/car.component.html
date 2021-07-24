@@ -1,0 +1,25 @@
+
+<input type="date" [(ngModel)]="date" />
+<br />
+<button type="button" class="btn btn-primary" (click)="display()">Search</button>
+
+<div>Maximum profit Car:{{maxProfitCar}}</div>
+
+<table class="table tale-striped">
+  <thead>
+    <tr>
+      <th>Car Make</th>
+      <th>Car Model</th>
+      <th>Buying Price</th>
+      <th>Selling Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dataItem of carList">
+      <td>{{dataItem.carMake}}</td>
+      <td>{{dataItem.carModel}}</td>
+      <td>{{dataItem.price}}</td>
+      <td>{{dataItem.sellingPrice}}</td>     
+    </tr>
+  </tbody>
+</table>
